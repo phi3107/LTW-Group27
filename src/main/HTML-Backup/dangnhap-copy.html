@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập, Đăng ký</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossorigin="anonymous">
+
+    <!-- owl carousel libraries cho hình nhỏ -->
+    <link rel="stylesheet" href="js/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/owlcarousel/owl.theme.default.min.css">
+    <script src="js/Jquery/Jquery.min.js"></script>
+    <script src="js/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/chitietsanpham.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet" href="css/loginform.css">
+
+    <!-- js -->
+    <!--    <script src="data/products.js"></script>-->
+    <script src="js/classes.js"></script>
+    <script src="js/dungchung.js"></script>
+    <script src="js/chitietsanpham.js"></script>
+    <script src="js/loginform.js"></script>
+</head>
+<body>
+<div class="top-nav group">
+    <section>
+        <div class="social-top-nav">
+            <a class="fa fa-facebook"></a>
+            <a class="fa fa-twitter"></a>
+            <a class="fa fa-google"></a>
+            <a class="fa fa-youtube"></a>
+        </div> <!-- End Social Topnav -->
+
+        <ul class="top-nav-quicklink flexContain">
+            <li><a href="index.html"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="tintuc.html"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
+            <li><a href="tuyendung.html"><i class="fa fa-handshake-o"></i> Tuyển dụng</a></li>
+            <li><a href="gioithieu.html"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
+            <li><a href="trungtambaohanh.html"><i class="fa fa-wrench"></i> Bảo hành</a></li>
+            <li><a href="lienhe.html"><i class="fa fa-phone"></i> Liên hệ</a></li>
+        </ul> <!-- End Quick link -->
+    </section><!-- End Section -->
+</div><!-- End Top Nav  -->
+
+<section>
+    <div class="header group">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.jpg" alt="Trang chủ Smartphone Store" title="Trang chủ Smartphone Store">
+            </a>
+        </div> <!-- End Logo -->
+
+        <div class="content">
+            <div class="search-header">
+                <form class="input-search" method="get" action="index.html">
+                    <div class="autocomplete">
+                        <input id="search-box" name="search" autocomplete="off" type="text" placeholder="Nhập từ khóa tìm kiếm...">
+                        <button type="submit">
+                            <i class="fa fa-search"></i>
+                            Tìm kiếm
+                        </button>
+                    </div>
+                </form> <!-- End Form search -->
+                <div class="tags">
+                    <strong>Từ khóa: </strong>
+                    <a href="index.html?search=Samsung">Samsung</a><a href="index.html?search=iPhone">iPhone</a><a href="index.html?search=Huawei">Huawei</a><a href="index.html?search=Oppo">Oppo</a><a href="index.html?search=Mobi">Mobi</a></div>
+            </div> <!-- End Search header -->
+
+            <div class="tools-member">
+                <div class="member">
+                    <a onclick="checkTaiKhoan()">
+                        <i class="fa fa-user"></i>
+                        Tài khoản
+                    </a>
+                    <div class="menuMember hide">
+                        <a href="nguoidung.html">Trang người dùng</a>
+                        <a onclick="if(window.confirm('Xác nhận đăng xuất ?')) logOut();">Đăng xuất</a>
+                    </div>
+
+                </div> <!-- End Member -->
+
+                <div class="cart">
+                    <a href="giohang.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                        <span class="cart-number"></span>
+                    </a>
+                </div> <!-- End Cart -->
+
+                <!--<div class="check-order">
+                    <a>
+                        <i class="fa fa-truck"></i>
+                        <span>Đơn hàng</span>
+                    </a>
+                </div> -->
+            </div><!-- End Tools Member -->
+        </div> <!-- End Content -->
+    </div> <!-- End Header -->
+
+    <div class="materialContainer">
+
+
+        <div class="box">
+
+            <div class="title">Đăng nhập</div>
+
+            <div class="input">
+                <label for="name">Tên tài khoản</label>
+                <input type="text" name="name" id="name">
+                <span class="spin"></span>
+            </div>
+
+            <div class="input">
+                <label for="pass">Mật khẩu</label>
+                <input type="password" name="pass" id="pass">
+                <span class="spin"></span>
+            </div>
+
+            <div class="button login">
+                <button><span>GO</span> <i class="fa fa-check"></i></button>
+            </div>
+
+            <a href="" class="pass-forgot">Quên mật khẩu?</a>
+
+        </div>
+
+        <div class="overbox">
+            <div class="material-button alt-2"><span class="shape"></span></div>
+
+            <div class="title">Đăng ký</div>
+
+            <div class="input">
+                <label for="regname">Tên tài khoản</label>
+                <input type="text" name="regname" id="regname">
+                <span class="spin"></span>
+            </div>
+
+            <div class="input">
+                <label for="regmail">Email</label>
+                <input type="text" name="regname" id="regmail">
+                <span class="spin"></span>
+            </div>
+
+            <div class="input">
+                <label for="regpass">Mật khẩu</label>
+                <input type="password" name="regpass" id="regpass">
+                <span class="spin"></span>
+            </div>
+
+            <div class="input">
+                <label for="reregpass">Nhập lại mật khẩu</label>
+                <input type="password" name="reregpass" id="reregpass">
+                <span class="spin"></span>
+            </div>
+
+            <div class="button">
+                <button><span>Tiếp tục</span></button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="containTaikhoan">
+    <span class="close" onclick="showTaiKhoan(false);">&times;</span>
+    <div class="taikhoan">
+
+        <ul class="tab-group">
+            <li class="tab active"><a href="#login">Đăng nhập</a></li>
+            <li class="tab"><a href="#signup">Đăng kí</a></li>
+        </ul> <!-- /tab group -->
+
+        <div class="tab-content">
+            <div id="login">
+                <h1>Chào mừng bạn trở lại!</h1>
+
+                <form onsubmit="return logIn(this);">
+
+                    <div class="field-wrap">
+                        <label>
+                            Tên đăng nhập<span class="req">*</span>
+                        </label>
+                        <input name='username' type="text" required autocomplete="off" />
+                    </div> <!-- /user name -->
+
+                    <div class="field-wrap">
+                        <label>
+                            Mật khẩu<span class="req">*</span>
+                        </label>
+                        <input name="pass" type="password" required autocomplete="off" />
+                    </div> <!-- pass -->
+
+                    <p class="forgot"><a href="#">Quên mật khẩu?</a></p>
+
+                    <button type="submit" class="button button-block" />Tiếp tục</button>
+
+                </form> <!-- /form -->
+
+            </div> <!-- /log in -->
+
+            <div id="signup">
+                <h1>Đăng kí miễn phí</h1>
+
+                <form onsubmit="return signUp(this);">
+
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <label>
+                                Họ<span class="req">*</span>
+                            </label>
+                            <input name="ho" type="text" required autocomplete="off" />
+                        </div>
+
+                        <div class="field-wrap">
+                            <label>
+                                Tên<span class="req">*</span>
+                            </label>
+                            <input name="ten" type="text" required autocomplete="off" />
+                        </div>
+                    </div> <!-- / ho ten -->
+
+                    <div class="field-wrap">
+                        <label>
+                            Địa chỉ Email<span class="req">*</span>
+                        </label>
+                        <input name="email" type="email" required autocomplete="off" />
+                    </div> <!-- /email -->
+
+                    <div class="field-wrap">
+                        <label>
+                            Tên đăng nhập<span class="req">*</span>
+                        </label>
+                        <input name="newUser" type="text" required autocomplete="off" />
+                    </div> <!-- /user name -->
+
+                    <div class="field-wrap">
+                        <label>
+                            Mật khẩu<span class="req">*</span>
+                        </label>
+                        <input name="newPass" type="password" required autocomplete="off" />
+                    </div> <!-- /pass -->
+
+                    <button type="submit" class="button button-block" />Tạo tài khoản</button>
+
+                </form> <!-- /form -->
+
+            </div> <!-- /sign up -->
+        </div><!-- tab-content -->
+
+    </div> <!-- /taikhoan -->
+</div>
+
+<!-- ============== Alert Box ============= -->
+<div id="alert">
+    <span id="closebtn">&otimes;</span>
+</div>
+
+<!-- ============== Footer ============= -->
+<!--<div class="copy-right">-->
+<!--    <p><a href="index.html">SmartPhone Store</a> - All rights reserved © 2020-->
+<!--</div>-->
+<!--<i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>-->
+</body>
+</html>

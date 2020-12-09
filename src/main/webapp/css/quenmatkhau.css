@@ -1,0 +1,36 @@
+#fp{
+    width: 20%;
+    padding: 50px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 80px 0px;
+    -webkit-box-shadow: 8px 9px 50px -11px rgba(0,0,0,0.81);
+    -moz-box-shadow: 8px 9px 50px -11px rgba(0,0,0,0.81);
+    box-shadow: 8px 9px 50px -11px rgba(0,0,0,0.81);
+}
+h1{
+    margin-bottom: 30px;
+    color: red;
+}
+#inputmail{
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+#inputmail::placeholder{
+    font-weight: bold;
+}
+#enter{
+    padding: 10px 20px;
+    width: 95%;
+    border-radius: 10px;
+    background-color: lightgray;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+#enter:hover{
+    background-color: #3e8e41;
+    color: whitesmoke;
+}
